@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --text: white;
+  --text2: springgreen;
+  --bg: #d5d5d5;
+  --f-size: 18px;
+  --height: 100vh;
+  --width: 100%;
+}
+.container {
+  width: var(--width);
+  height: var(--height);
+  background-image: url(img/car.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.content {
+  width: 88%;
+  margin: auto;
+}
+.content .logo {
+  background-color: var(--bg);
+
+  width: 150px;
+  border-radius: 5px;
+}
+.content hr {
+  height: 6px;
+  max-width: 250px;
+  border: none;
+  background-color: var(--bg);
+  margin-top: 8px;
+}
+.content h1 {
+  font-size: 100px;
+  color: var(--text);
+  font-weight: 100;
+  margin: 60px 0 30px 0;
+  line-height: 120px;
+  text-shadow: 2px 1px 1px springgreen;
+}
+
+.content p {
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  max-width: 450px;
+  box-shadow: 1em 0 0 whitesmoke, -1em 0 0 whitesmoke;
+  background-color: black;
+  box-decoration-break: clone;
+  letter-spacing: 1px;
+  line-height: 20px;
+  padding: 2px 5px;
+}
+.content .btn {
+  margin: 50px;
+  padding: 18px 34px;
+  border: 1px solid whitesmoke;
+  background-color: green;
+  border-radius: 50px;
+  transition: all 0.5s ease-in 0s;
+}
+.content .btn a {
+  text-decoration: none;
+  color: var(--text);
+}
+.btn2 {
+  float: right;
+}
+.content .btn:hover {
+  transform: translateY(-3px);
+  background: hotpink;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu img {
+  width: 50px;
+}
+.menu .sqr {
+  width: 40px;
+  margin-left: 20px;
+}
+.menu img:hover {
+  animation: round 0.5s ease 0s;
+  /* animation-fill-mode: forwards; */
+  cursor: pointer;
+}
+@keyframes round {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    height: 100%;
+  }
+  .content {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  #btns {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
